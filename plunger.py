@@ -1,3 +1,9 @@
+"""
+Author: Murat Kuru
+Description: This class is about implementing Optimistic maximax model with Python.
+Python Version: 3.5.3
+"""
+
 from decisionbase import DecisionBase
 
 class Plunger:
