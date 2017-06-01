@@ -8,15 +8,15 @@ from decisionbase import DecisionBase
 
 class Laplace:
     def __init__(self, matrix):
-        self.matrix = matrix
+        self.__matrix = matrix
 
     def __getRatio(self):
-        length = len(self.matrix[0])
+        length = len(self.__matrix[0])
         return float(1) / length
 
     def __getCalculationValues(self):
         ratio = self.__getRatio()
-        calc = list(map(lambda x: ratio * sum(x), self.matrix))
+        calc = list(map(lambda x: ratio * sum(x), self.__matrix))
         return calc
     
     def getResult(self, decisionBase):
