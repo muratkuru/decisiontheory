@@ -8,15 +8,13 @@ from decisionbase import DecisionBase
 
 class Wald:
     def __init__(self, matrix):
-        self.matrix = matrix
+        self.__matrix = matrix
     
     def __getMaximumValues(self):
-        maximumValues = list(map(lambda x: max(x), self.matrix))
-        return maximumValues
+        return list(map(lambda x: max(x), self.__matrix))
 
     def __getMinimumValues(self):
-        minimumValues = list(map(lambda x: min(x), self.matrix))
-        return minimumValues
+        return list(map(lambda x: min(x), self.__matrix))
     
     def getResult(self, decisionBase):
         if decisionBase == DecisionBase.cost:
